@@ -33,7 +33,7 @@ bundle init
 rspec --init
 ```
 8. Add dependencies to the Gemfile:
-```
+```ruby
 gem 'rspec'
 gem 'sinatra'
 ```
@@ -46,4 +46,30 @@ bundle
 touch app.rb
 touch config.ru
 ```
+11. Add this to app.rb
+```ruby
+require 'sinatra/base'
 
+class Battle < Sinatra::Base
+  get '/' do
+    "Hello Battle!"
+  end
+
+  # start the server if ruby file executed directly
+  run! if app_file == $0
+end
+```
+12. Add this to config.ru
+```ruby
+require_relative "./app"
+run Battle
+```
+14. Now it should be up and running! Run this command in the Battle directory:
+```
+rackup
+```
+15. Go to localhost:9292
+```
+Hello Battle!
+```
+16. It is up and running! Time to make the game.
