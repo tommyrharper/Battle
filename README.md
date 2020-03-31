@@ -41,3 +41,9 @@ gem 'sinatra'
 ```
 bundle
 ```
+10. Created app.rb and config.ru
+```
+touch app.rb
+touch config.ru
+```
+
