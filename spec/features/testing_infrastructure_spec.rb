@@ -5,6 +5,7 @@ feature 'Testing infrastructre' do
   end
 end
 
+
 feature 'players fill in their names' do
   scenario 'enter names' do
     visit('/')
