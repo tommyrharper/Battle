@@ -7,3 +7,10 @@ feature 'players fill in their names' do
   expect(page).to have_content 'Dave vs. Mittens'
   end
 end
+
+feature 'I want to see the other players hitpoints' do
+  scenario "see player 2's hit points" do
+    visit('/play')
+  expect(page).to have_content "100HP"
+  end
+end
